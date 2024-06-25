@@ -41,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aunali321/sentira-common.git"
+    "url": "git+https://github.com/Aunali321/sentiraai-sdk-typescript.git"
   },
   "bugs": {
-    "url": "https://github.com/Aunali321/sentira-common/issues"
+    "url": "https://github.com/Aunali321/sentiraai-sdk-typescript/issues"
   }
 }
