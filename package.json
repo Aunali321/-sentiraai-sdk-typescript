@@ -46,5 +46,8 @@
   "bugs": {
     "url": "https://github.com/Aunali321/sentiraai-sdk-typescript/issues"
   },
-  "private": false
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
 }
