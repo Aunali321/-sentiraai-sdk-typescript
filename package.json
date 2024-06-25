@@ -1,34 +1,38 @@
 {
-  "name": "@sentira-ai/common",
-  "version": "1.9.0",
-  "description": "Common functions for Sentira AI",
+  "name": "@sentira-ai/sdk",
+  "version": "1.0.0",
+  "description": "Official SentiraAI TypeScript SDK",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc *.ts --outDir dist",
-    "start": "nodemon --watch dist --exec \"node dist/example.js\""
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc",
+    "prepare": "npm run build",
+    "semantic-release": "semantic-release"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "sentira-ai",
     "transcription",
     "summarization"
   ],
   "author": "Aunali321",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "@saithodev/semantic-release-backmerge": "^3.1.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3",
-    "@vercel/ncc": "^0.36.1",
     "@types/semantic-release": "^20.0.1",
-    "@types/semver": "^7.3.13"
+    "@types/semver": "^7.3.13",
+    "rimraf": "^5.0.7",
+    "semantic-release": "^24.0.0",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "cohere-ai": "^7.6.2",
-    "cross-fetch": "^4.0.0",
-    "semantic-release": "^21.0.1",
-    "semver": "^7.5.0"
+    "axios": "^1.7.2",
+    "semver": "^7.5.0",
+    "winston": "^3.13.0"
   },
   "release": {
     "branches": [
