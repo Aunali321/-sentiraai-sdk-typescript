@@ -46,7 +46,7 @@ export interface SummarizeOptions {
     file?: Buffer;
     summary_length: 'short' | 'medium' | 'long';
     summary_format: 'bullets' | 'paragraph';
-    model: 'anthropic' | 'google';
+    model: 'slow' | 'fast';
     additional_command?: string;
     stream?: boolean;
 }

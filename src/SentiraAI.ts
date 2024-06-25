@@ -58,11 +58,16 @@ class SentiraAI {
             const response = await this.axiosInstance.request<T>(config);
             return response.data;
         } catch (error) {
-            logger.error('API request failed', { error: error.message, endpoint: config.url });
+            logger.error('API request failed', {
+                error: error instanceof Error ? error.message : String(error),
+                endpoint: config.url
+            });
             if (axios.isAxiosError(error) && error.response) {
                 throw new SentiraApiError(`API error: ${error.response.status} - ${error.response.data.detail}`, error.response.status);
-            } else {
+            } else if (error instanceof Error) {
                 throw new SentiraApiError(`Network error: ${error.message}`);
+            } else {
+                throw new SentiraApiError('An unknown error occurred');
             }
         }
     }

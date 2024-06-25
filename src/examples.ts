@@ -10,7 +10,7 @@ async function example() {
             text: 'Your long text here...',
             summary_length: 'short',
             summary_format: 'paragraph',
-            model: 'anthropic'
+            model: 'slow'
         });
         console.log('Summary:', summaryResult.response.summary);
 
