@@ -10,7 +10,7 @@ class SentiraAI {
 
     constructor(config: SentiraConfig) {
         this.config = {
-            baseUrl: 'https://api.sentira.io',
+            baseUrl: 'https://api.sentiraai.com',
             ...config
         };
 
