@@ -57,7 +57,7 @@ export interface TranscribeOptions {
     transcript_type: 'text';
     audio_url?: string;
     use_subtitles?: boolean;
-    model: 'nova-2' | 'whisper-large';
+    model: 'fast' | 'slow';
 }
 
 export interface SummarizeResponse {

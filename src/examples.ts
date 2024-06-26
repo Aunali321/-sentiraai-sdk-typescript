@@ -19,7 +19,7 @@ async function example() {
             file: audioBuffer,
             input_type: 'file',
             transcript_type: 'text',
-            model: 'nova-2'
+            model: 'fast'
         });
         console.log('Transcription:', transcriptionResult.response.transcript);
 
