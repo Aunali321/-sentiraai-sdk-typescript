@@ -124,9 +124,9 @@ class SentiraAI {
         const formData = new FormData();
         for (const [key, value] of Object.entries(options)) {
             if (key === 'file' && value instanceof Buffer) {
-                formData.append('file', value, { filename: 'audio.mp3' });
+                formData.append('file', value, 'audio.mp3');
             } else {
-                formData.append(key, value as string | Blob);
+                formData.append(key, value as string);
             }
         }
 
@@ -134,7 +134,7 @@ class SentiraAI {
             method: 'POST',
             url: '/transcribe',
             data: formData,
-            headers: { ...formData.getHeaders() }
+            headers: formData.getHeaders()
         });
     }
 }
